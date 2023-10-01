@@ -39,4 +39,36 @@ Railsにはデフォルトでテストの機能が備わっています。
 
 
 <!--RSpecの構成-->
+<!--四則演算のテストの例を見ながら学んでいきます。
+まず、RSpecを使用する上で、コードの中で使用されるものを大まかに確認します。
+
+describe（テストの大きなくくりを示します：必須）
+context（describeより詳細に分ける場合にのみ使用します）
+it（具体的なテストの内容を示します：必須）
+before（itの内容を実行する前に必要であれば使用します）
+
+
+describe '四則演算' do
+  context '足し算' do
+    it '1 + 1 は 2 になる' do
+      expect(1 + 1).to eq 2
+    end
+  end
+  context '足し算' do
+    it '3 + 2 は 5 になる' do
+      expect(3 + 2).to eq 5
+    end
+  end
+  context '引き算' do
+    it '3 - 1 は 2 になる' do
+      expect(3 - 1).to eq 2
+    end
+  end
+  context '引き算' do
+    it '5 - 2 は 3 になる' do
+      expect(5 - 2).to eq 3
+    end
+  end
+end
+
 
